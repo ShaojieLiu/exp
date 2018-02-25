@@ -1,0 +1,26 @@
+{
+  "name": "study_express",
+  "version": "1.0.0",
+  "description": "study express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ShaojieLiu@github.com/ShaojieLiu/exp.git"
+  },
+  "keywords": [
+    "study",
+    "express"
+  ],
+  "author": "liushaojie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaojieLiu/exp/issues"
+  },
+  "homepage": "https://github.com/ShaojieLiu/exp#readme",
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
