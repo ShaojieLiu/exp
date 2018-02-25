@@ -8,13 +8,7 @@
 
 1. [阮一峰命令行教程 ](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
 2. [shelljs npm](https://www.npmjs.com/package/shelljs)
-
-----
-
-### shelljs 和 fs 的使用
-
-1. exec执行
-2. shell.global
+3. [chalk](https://github.com/chalk/chalk)
 
 ----
 
@@ -26,3 +20,5 @@
 4. shelljs 模块, 对child_process 的封装 (可以执行unix系统命令)
     - shell.exec 执行
     - shell/global 会注册多个全局函数
+
+----
