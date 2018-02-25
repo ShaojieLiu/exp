@@ -1,6 +1,8 @@
 // 引入一个模块, 会在下面用到
 // 模块就是别人已经写好的程序, 我们可以直接拿来使用
 const net = require('net')
+const fs = require('fs')
+const url = require('url')
 
 // 配置服务器的参数
 // 服务器的 host 为空字符串, 表示接受任意 ip 地址的连接
@@ -52,13 +54,9 @@ server.on('connection', (socket) => {
         // buffer 类型调用 toString() 可以将二进制数据转成字符串
         const r = foo.toString()
         console.log('接受到的原始数据', r, typeof(r))
+        const str = fs.readFileSync('./res/logo.png')
 
-        // response 是返回的数据
-        // 为了告诉浏览器有多少数据, 避免它一直等待, 可以提前在 header 中表明数据量
-
-        // 你可以把Content-Type: text/html;charset=utf8去掉, 观察浏览器和client.js的情况
-        // Content-Length: 12改改这个数字看有什么变化, 再配合socket.destroy
-        const response = 'HTTP/1.1 200 OK\r\nContent-Length: 12\r\nContent-Type: text/html;charset=utf8\r\n\r\nHello world!'
+        const response = 'HTTP/1.1 200 OK\r\nContent-Type: text/html;charset=utf8\r\n\r\n' + 'Hello World!123'
         // write 方法用来发送数据
         // 参数可以是 string 类型, 也可以是 buffer 类型
         socket.write(response)

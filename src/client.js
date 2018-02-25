@@ -10,7 +10,7 @@ const net = require('net')
 // const host = '59.111.160.195' // 网易云
 // const port = 80
 
-const host = '127.0.0.1' // 
+const host = '127.0.0.1' //
 const port = 2000
 
 // 创建一个客户端, 可以连接到服务器
@@ -19,7 +19,7 @@ const client = new net.Socket()
 // 客户端根据给出的配置参数打开一个连接, 这样可以连接到服务器
 client.connect(port, host, () => {
     console.log('connect to: ', host, port)
-
+    
     // 向服务器发送一个消息
     const request = 'GET / HTTP/1.1\r\nHost: music.163.com\r\n\r\n'
     client.write(request)
